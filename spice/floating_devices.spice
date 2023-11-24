@@ -1,0 +1,18 @@
+** sch_path: /home/leo/Nextcloud/Programmieren/ASIC/semicon2023-tgff/schematic/floating_devices.sch
+**.subckt floating_devices
+M2 net1 net2 net3 net4 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M3 net5 net6 net7 net8 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M1 net9 net10 net11 net12 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M4 net13 net14 net15 net16 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M5 net17 net18 net19 net20 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M6 net21 net22 net23 net24 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M7 net25 net26 net27 net28 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M8 net29 net30 net31 net32 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M9 net33 net34 net35 net36 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M10 net37 net38 net39 net40 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M11 net41 net42 net43 net44 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M12 net45 net46 net47 net48 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M15 net49 net50 net51 net52 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M16 net53 net54 net55 net56 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+**.ends
+.end

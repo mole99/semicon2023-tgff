@@ -1,0 +1,58 @@
+** sch_path: /home/leo/Nextcloud/Programmieren/ASIC/semicon2023-tgff/schematic/d-ff_tb.sch
+**.subckt d-ff_tb Q QN
+*.iopin Q
+*.iopin QN
+V1 D 0 PULSE(0 3 0 0 0 0.3u 0.6u)
+V3 VDD 0 3
+V4 CLK 0 PULSE(0 3 0 0 0 0.2u 0.4u)
+x1 CLK D Q 0 VDD QN d-ff
+**** begin user architecture code
+
+
+.include ~/.klayout/salt/ICPS2023_5/Technology/tech/models/SOI_CMOS
+.control
+save all
+
+** simulation command
+tran 1n 1u
+
+** plot data
+plot CLK, D, Q, QN
+.endc
+
+
+**** end user architecture code
+**.ends
+
+* expanding   symbol:  /home/leo/Nextcloud/Programmieren/ASIC/Semicon2023_D-FF/d-ff/d-ff.sym # of
+*+ pins=6
+** sym_path: /home/leo/Nextcloud/Programmieren/ASIC/Semicon2023_D-FF/d-ff/d-ff.sym
+** sch_path: /home/leo/Nextcloud/Programmieren/ASIC/Semicon2023_D-FF/d-ff/d-ff.sch
+.subckt d-ff CLK D Q GND VDD QN
+*.iopin Q
+*.iopin D
+*.iopin VDD
+*.iopin CLK
+*.iopin GND
+*.iopin QN
+M1 CLKN CLK VDD VDD pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M4 CLKN CLK GND GND nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M2 net1 net2 VDD VDD pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M3 net1 net2 GND GND nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M5 D CLK net2 VDD pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M6 D CLKN net2 GND nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M7 net2 CLKN net3 VDD pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M8 net2 CLK net3 GND nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M9 net3 net1 VDD VDD pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M10 net3 net1 GND GND nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M11 Q net4 VDD VDD pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M12 Q net4 GND GND nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M13 net1 CLKN net4 net5 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M14 net1 CLK net4 net6 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M15 net4 CLK QN VDD pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M16 net4 CLKN QN GND nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M17 QN Q VDD VDD pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M18 QN Q GND GND nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+.ends
+
+.end

@@ -1,0 +1,28 @@
+** sch_path: /home/leo/Nextcloud/Programmieren/ASIC/semicon2023-tgff/schematic/d-ff.sch
+**.subckt d-ff Q D VDD CLK GND QN
+*.iopin Q
+*.iopin D
+*.iopin VDD
+*.iopin CLK
+*.iopin GND
+*.iopin QN
+M1 CLKN CLK VDD net6 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M4 CLKN CLK GND net7 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M2 net1 net2 VDD net8 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M3 net1 net2 GND net9 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M5 D CLK net2 net10 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M6 D CLKN net2 net11 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M7 net2 CLKN net3 net12 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M8 net2 CLK net3 net13 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M9 net3 net1 VDD net14 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M10 net3 net1 GND net15 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M11 Q net4 VDD net16 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M12 Q net4 GND net17 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M13 net1 CLKN net4 net18 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M14 net1 CLK net4 net19 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M15 net4 CLK QN net20 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M16 net4 CLKN QN net21 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M17 QN Q VDD net22 pch w=40.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+M18 QN Q GND net23 nch w=10.0U l=10.0U as=0 ps=0 ad=0 pd=0 m=1
+**.ends
+.end
