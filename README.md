@@ -2,6 +2,17 @@
 
 This repository contains the schematic and layout of a transmission-gate D-FF (TGFF) for the Minimal Fab design contest. The functionality was verified with a transient simulation. The final layout was validated using DRC and LVS.
 
+| Pin            | Function | Direction |
+|----------------|----------|-----------|
+| pin25          | CLK      | input     |
+| pin27          | D        | input     |
+| pin10          | Q        | output    |
+| pin12          | QN       | output    |
+| pin15 to pin22 | VDD      | power     |
+| pin01 to pin08 | VSS      | ground    |
+
+I designed this circuit to get to know xschem and Klayout as well as the ICPS PDK.
+
 # Schematic
 
 ![d-ff.png](images/d-ff.png)
@@ -23,6 +34,10 @@ This repository contains the schematic and layout of a transmission-gate D-FF (T
 # LVS
 
 ![LVS](images/LVS.png)
+
+# Acknowledgments
+
+I would like to thank Minimal Fab for releasing the ICPS PDK as open source and for organizing this design contest.
 
 # License
 
